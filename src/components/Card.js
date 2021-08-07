@@ -1,5 +1,4 @@
 import React from "react";
-import exeImg from '../images/exercise.png'
 import './styles/Card.css'
 import circuleImg from '../images/circles.png'
 
@@ -17,12 +16,12 @@ class Card extends React.Component {
             this.setState({
                 imagenState: this.props.img
             })
-        }, 3000)
+        }, 1000)
     }
 
     render() {
         // Ejemplo para que puedas mejorar el codigo sin poner this
-        const { title, img } = this.props
+        const { title } = this.props
 
         return (
             <div className='card mx-auto Fitness-Card'
