@@ -4,6 +4,22 @@ import './styles/Card.css'
 import circuleImg from '../images/circles.png'
 
 class Card extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            imagenState: 'https://i.ytimg.com/vi/oMesfTZFaeM/hqdefault.jpg'
+        }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                imagenState: this.props.img
+            })
+        }, 3000)
+    }
+
     render() {
         // Ejemplo para que puedas mejorar el codigo sin poner this
         const { title, img } = this.props
@@ -17,7 +33,7 @@ class Card extends React.Component {
                 <div className='card-body'>
                     <div className='row center'>
                         <div className='col-6'>
-                            <img src={img} alt="" className='float-right'/>
+                            <img src={this.state.imagenState} alt="" className='float-right'/>
                         </div>
                         <div className='col-6 Fitness-Card-Info'>
                             <h1>{title}</h1>
