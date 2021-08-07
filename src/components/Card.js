@@ -5,6 +5,9 @@ import circuleImg from '../images/circles.png'
 
 class Card extends React.Component {
     render() {
+        // Ejemplo para que puedas mejorar el codigo sin poner this
+        const { title, img } = this.props
+
         return (
             <div className='card mx-auto Fitness-Card'
             style={{
@@ -14,10 +17,10 @@ class Card extends React.Component {
                 <div className='card-body'>
                     <div className='row center'>
                         <div className='col-6'>
-                            <img src={exeImg} alt="" className='float-right'/>
+                            <img src={img} alt="" className='float-right'/>
                         </div>
                         <div className='col-6 Fitness-Card-Info'>
-                            <h1>{this.props.title}</h1>
+                            <h1>{title}</h1>
                             <p>{this.props.description}</p>
                         </div>
                     </div>
