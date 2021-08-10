@@ -8,7 +8,7 @@ const ExercisesList = ({exercises}) => (
             exercises.map(exercise => {
                 return (
                     <Card
-                        id={exercise.id}
+                        key={exercise.id}
                         title={exercise.title}
                         description={exercise.description}
                         img={exercise.img}
