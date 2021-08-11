@@ -1,9 +1,8 @@
 import React from "react";
-import ExerciseForm from "../components/ExerciseForm";
-import Card from "../components/Card";
 import FatalError from "./500";
+import ExerciseNew from "./ExerciseNew";
 
-class ExercisesNew extends React.Component{
+class ExercisesNewContainer extends React.Component{
 
     state = {
         form: {
@@ -61,23 +60,12 @@ class ExercisesNew extends React.Component{
         if (this.state.error)
             return <FatalError/>
 
-        return (
-            <div className="ExerciseNew_Lateral_Spaces row">
-                <div className="col-sm ExerciseNew_Card_Space">
-                    <Card {...this.state.form}/>
-                </div>
-                <div className="col-sm ExerciseNew_Form_Space">
-                    <ExerciseForm
-                        onChange={this.handleChange}
-                        form={this.state.form}
-                        onSubmit={this.handleSubmit}
-                    />
-                </div>
-            </div>
-
-
-        )
+        return <ExerciseNew
+            form={this.state.form}
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+        />
     }
 }
 
-export default ExercisesNew
+export default ExercisesNewContainer
