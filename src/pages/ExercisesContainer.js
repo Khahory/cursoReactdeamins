@@ -44,8 +44,7 @@ class ExercisesContainer extends React.Component{
             return <FatalError/>
         
         return <Exercises
-            exercises={this.state.data}
-        />
+            data={this.state.data}/>
     }
 }
 

@@ -3,10 +3,10 @@ import Welcome from "../components/Welcome";
 import ExercisesList from "../components/ExercisesList";
 import AddButtom from "../components/AddButton";
 
-const Exercises = ({exercises}) => (
+const Exercises = ({data}) => (
     <React.Fragment>
         <Welcome name='Khahory'/>
-        <ExercisesList exercises={exercises}/>
+        <ExercisesList exercises={data}/>
         <AddButtom />
     </React.Fragment>
 )
